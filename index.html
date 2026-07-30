@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yashraj Gautam Tambe — AI/ML Engineer</title>
+<meta name="description" content="Yashraj Gautam Tambe — AI/ML Engineer specializing in computer vision, LLM/RAG systems, and imitation learning.">
+<!-- ============================================================
+     EDIT GUIDE
+     - Replace every [ ... ] placeholder with your real info.
+     - Add your LinkedIn URL where marked.
+     - Verify dates, titles, GPA, and metrics before publishing.
+     - To add your resume: drop resume.pdf in the repo and the
+       "Resume" link below will work.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFAF7; --ink:#15171C; --muted:#666C74; --line:#E7E4DC;
+    --accent:#2E3BE0; --accent-soft:#EDEEFC; --card:#FFFFFF; --chip:#F1EFE9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em;line-height:1.15}
+  a{color:inherit}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .brand{font-family:"Space Grotesk";font-weight:700;font-size:16px}
+  nav .links{display:flex;gap:22px}
+  nav .links a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .15s}
+  nav .links a:hover{color:var(--accent)}
+  @media(max-width:640px){nav .links{display:none}}
+
+  /* Hero */
+  header{padding:88px 0 56px}
+  .eyebrow{font-family:"Space Grotesk";font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  header h1{font-size:clamp(34px,6vw,56px);font-weight:700;margin-bottom:16px}
+  header .role{font-family:"Space Grotesk";font-size:clamp(18px,3vw,24px);font-weight:500;color:var(--ink);margin-bottom:20px}
+  header p.intro{font-size:18px;color:var(--muted);max-width:640px;margin-bottom:28px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:"Space Grotesk";font-weight:500;font-size:14px;text-decoration:none;padding:10px 18px;border-radius:10px;transition:all .15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:#2430c4}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* Sections */
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  .sec-label{font-family:"Space Grotesk";font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+  h2.sec-title{font-size:28px;font-weight:600;margin-bottom:24px}
+  p.lead{font-size:18px;color:var(--ink);max-width:680px}
+
+  /* Experience */
+  .xp{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .xp:last-child{border-bottom:0}
+  .xp .when{font-family:"Space Grotesk";font-size:13px;color:var(--muted);min-width:130px;padding-top:3px}
+  .xp .role{font-family:"Space Grotesk";font-weight:600;font-size:17px}
+  .xp .org{color:var(--accent);font-size:15px;margin-bottom:8px}
+  .xp ul{margin:6px 0 0 18px;color:var(--muted);font-size:15px}
+  .xp li{margin-bottom:4px}
+  @media(max-width:640px){.xp{flex-direction:column;gap:4px}.xp .when{min-width:0}}
+
+  /* Projects */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card .tag{font-family:"Space Grotesk";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+  .card h3{font-size:19px;font-weight:600;margin-bottom:10px}
+  .card p{font-size:14px;color:var(--muted);margin-bottom:14px;flex:1}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .chip{font-family:"Space Grotesk";font-size:11px;background:var(--chip);color:var(--ink);padding:3px 9px;border-radius:20px}
+  .card .glink{font-family:"Space Grotesk";font-size:13px;font-weight:500;color:var(--accent);text-decoration:none}
+  .card .glink:hover{text-decoration:underline}
+  .inprogress{opacity:.92}
+  .badge{font-family:"Space Grotesk";font-size:11px;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:6px;margin-left:6px}
+
+  /* Skills */
+  .skillgrid{display:flex;flex-wrap:wrap;gap:8px}
+  .skill{font-family:"Space Grotesk";font-size:14px;border:1px solid var(--line);padding:7px 14px;border-radius:10px}
+
+  /* Education */
+  .edu .role{font-family:"Space Grotesk";font-weight:600;font-size:17px}
+  .edu .org{color:var(--accent);font-size:15px}
+  .edu .meta{color:var(--muted);font-size:14px;margin-top:4px}
+
+  footer{padding:48px 0 60px;border-top:1px solid var(--line);text-align:center}
+  footer .flinks{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+  footer a{font-family:"Space Grotesk";font-size:14px;color:var(--ink);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  footer .fine{font-size:13px;color:var(--muted)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">YT</span>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">AI / ML Engineer</div>
+    <h1>Yashraj Gautam Tambe</h1>
+    <div class="role">Computer Vision · LLM &amp; RAG Systems · Imitation Learning</div>
+    <p class="intro">Machine learning engineer with ~4 years of experience building production LLM/RAG pipelines, computer-vision perception systems, and imitation-learning agents. Currently completing an MS in Applied Machine Intelligence at Northeastern University.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="mailto:tambe.y@northeastern.edu">Get in touch</a>
+      <!-- Add resume.pdf to the repo to enable this link -->
+      <a class="btn ghost" href="resume.pdf">Resume</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <div class="sec-label">About</div>
+    <p class="lead">I build systems that turn models into working products — from 6-DoF object pose estimation and vision-based control to LLM pipelines that classify, reason over, and respond to real-world data. My focus areas are computer vision and perception, generative-AI/LLM systems, and applied NLP. I care about shipping things that actually run, and about verifying results against the artifact rather than the claim.</p>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <div class="wrap">
+    <div class="sec-label">Experience</div>
+    <div class="xp">
+      <div class="when">2022 – 2025 <!-- [verify dates] --></div>
+      <div>
+        <div class="role">Senior Engineer / Data Science Engineer</div>
+        <div class="org">Tata Elxsi</div>
+        <ul>
+          <li>Built LLM and RAG pipelines for client applications, from retrieval and prompting through evaluation.</li>
+          <li>Self-taught RAG (via DeepLearning.AI) when a client needed LLM capabilities, then shipped it into production.</li>
+          <li><!-- [add 1–2 concrete, verifiable achievements — with real metrics only] --></li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Earlier</div>
+      <div>
+        <div class="role">Internships &amp; Early Roles</div>
+        <div class="org">ClearQuote · Necesario · PAICA · Shashwat Foundation · Microland (BNP Paribas)</div>
+        <ul>
+          <li><!-- [add one line summarizing the kind of work across these, if you'd like] --></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <div class="sec-label">Selected Projects</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="tag">Computer Vision · Perception</div>
+        <h3>6-DoF Object Pose Estimation</h3>
+        <p>A pose-estimation pipeline built on FoundationPose and evaluated on the LM-O dataset across four validated stages, with an RViz2 visualizer for inspecting predicted poses.</p>
+        <div class="chips"><span class="chip">FoundationPose</span><span class="chip">LM-O</span><span class="chip">ROS2 / RViz2</span><span class="chip">Python</span></div>
+        <a class="glink" href="https://github.com/yjtrx/6D_object_pose_estimation" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">LLM · Applied NLP</div>
+        <h3>CLAIRE — LLM-Powered Consumer Complaint Intake &amp; Resolution Engine</h3>
+        <p>A GPT-4o-mini pipeline that classifies CFPB consumer complaints into the official taxonomy, assigns SLA tiers (14/20/30 days), and drafts consumer-facing responses — deployed as a three-tab Streamlit app. ~84% product / ~83% issue classification accuracy (n=100). <!-- [verify metrics before publishing] --></p>
+        <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">RAG</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
+        <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card inprogress">
+        <div class="tag">Reinforcement Learning · Robotics</div>
+        <h3>Autonomous Drone Navigation <span class="badge">In progress</span></h3>
+        <p>Vision-only navigation in simulation: a CNN/ViT feature extractor feeding a PPO policy, trained in gym-pybullet-drones for obstacle-aware flight.</p>
+        <div class="chips"><span class="chip">PPO</span><span class="chip">CNN / ViT</span><span class="chip">gym-pybullet-drones</span><span class="chip">PyTorch</span></div>
+        <a class="glink" href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub profile →</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Imitation Learning</div>
+        <h3>Behavior Cloning &amp; DAgger on MuJoCo</h3>
+        <p>Imitation-learning agents trained with Behavior Cloning and DAgger on MuJoCo control tasks, reaching ~82% of expert performance on HalfCheetah via DAgger.</p>
+        <div class="chips"><span class="chip">DAgger</span><span class="chip">Behavior Cloning</span><span class="chip">MuJoCo</span><span class="chip">PyTorch</span></div>
+        <a class="glink" href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub profile →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="wrap">
+    <div class="sec-label">Skills</div>
+    <div class="skillgrid">
+      <span class="skill">Python</span>
+      <span class="skill">PyTorch</span>
+      <span class="skill">TensorFlow / Keras</span>
+      <span class="skill">LLM &amp; RAG pipelines</span>
+      <span class="skill">Applied NLP</span>
+      <span class="skill">Computer Vision &amp; Perception</span>
+      <span class="skill">Imitation Learning (BC / DAgger)</span>
+      <span class="skill">GCP &amp; Vertex AI</span>
+      <span class="skill">ROS2 / RViz2</span>
+      <span class="skill">Streamlit</span>
+      <span class="skill">Git</span>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <div class="wrap">
+    <div class="sec-label">Education</div>
+    <div class="edu">
+      <div class="role">M.S., Applied Machine Intelligence</div>
+      <div class="org">Northeastern University</div>
+      <div class="meta">2024 – 2026 · GPA 4.0 <!-- [verify] --> · Coursework incl. Applied Computer Vision</div>
+    </div>
+    <div class="edu" style="margin-top:18px">
+      <div class="role"><!-- [Your undergraduate degree] --></div>
+      <div class="org"><!-- [University] --></div>
+      <div class="meta"><!-- [Years] --></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="mailto:tambe.y@northeastern.edu">Email</a>
+      <a href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub</a>
+      <!-- Add your LinkedIn URL below -->
+      <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="fine">© <span id="yr"></span> Yashraj Gautam Tambe · Built and hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Reveal-on-scroll
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
