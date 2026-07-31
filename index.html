@@ -3,98 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E0A">
 <title>Yashraj Gautam Tambe — AI/ML Engineer</title>
-<meta name="description" content="Yashraj Gautam Tambe — AI/ML Engineer specializing in computer vision, LLM/RAG systems, and imitation learning.">
+<meta name="description" content="Yashraj Gautam Tambe — AI/ML Engineer: computer vision, LLM/RAG systems, imitation learning.">
 <!-- ============================================================
      EDIT GUIDE
      - Replace every [ ... ] placeholder with your real info.
      - Add your LinkedIn URL where marked.
      - Verify dates, titles, GPA, and metrics before publishing.
-     - To add your resume: drop resume.pdf in the repo and the
-       "Resume" link below will work.
+     - To add your resume: drop resume.pdf in the repo (Resume link).
+     - Theme toggle: default is terminal (dark). Choice is remembered.
      ============================================================ -->
+<!-- set theme before paint to avoid flash -->
+<script>try{var _t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',_t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FBFAF7; --ink:#15171C; --muted:#666C74; --line:#E7E4DC;
-    --accent:#2E3BE0; --accent-soft:#EDEEFC; --card:#FFFFFF; --chip:#F1EFE9;
+    --bg:#0A0E0A; --panel:#0E140E; --panel2:#111A11;
+    --green:#33FF77; --dim:#93D9A6; --mut:#5F8A6A; --line:#1B2A1B;
+    --glow:0 0 7px rgba(51,255,119,.45); --navbg:rgba(10,14,10,.9);
+  }
+  html[data-theme="light"]{
+    --bg:#FBFAF7; --panel:#FFFFFF; --panel2:#F3F1EA;
+    --green:#0F7D3E; --dim:#20261F; --mut:#5C6B5A; --line:#E3E2DA;
+    --glow:none; --navbg:rgba(251,250,247,.92);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{
+    font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+    color:var(--dim);background:var(--bg);line-height:1.65;font-size:15px;
+    -webkit-font-smoothing:antialiased;transition:background .25s,color .25s;
+  }
+  /* CRT scanlines (dark only) */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:100;
+    background:repeating-linear-gradient(to bottom,transparent 0,transparent 2px,rgba(0,0,0,.16) 3px);
+    opacity:.55;transition:opacity .25s;
+  }
+  html[data-theme="light"] body::before{opacity:0}
   .wrap{max-width:900px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em;line-height:1.15}
-  a{color:inherit}
+  h1,h2,h3{font-weight:700;line-height:1.2;letter-spacing:-.01em}
+  a{color:var(--green)}
 
   /* Nav */
-  nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-  nav .brand{font-family:"Space Grotesk";font-weight:700;font-size:16px}
-  nav .links{display:flex;gap:22px}
-  nav .links a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .15s}
-  nav .links a:hover{color:var(--accent)}
+  nav{position:sticky;top:0;z-index:20;background:var(--navbg);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+  nav .brand{color:var(--green);font-weight:700;font-size:14px;text-shadow:var(--glow)}
+  .navright{display:flex;align-items:center;gap:20px}
+  nav .links{display:flex;gap:20px}
+  nav .links a{font-size:13px;color:var(--mut);text-decoration:none;transition:color .15s,text-shadow .15s}
+  nav .links a::before{content:"~/";color:var(--line)}
+  nav .links a:hover{color:var(--green);text-shadow:var(--glow)}
+  .tbtn{font-family:inherit;font-size:12px;color:var(--mut);background:transparent;border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer;transition:all .15s}
+  .tbtn:hover{color:var(--green);border-color:var(--green)}
   @media(max-width:640px){nav .links{display:none}}
 
   /* Hero */
-  header{padding:88px 0 56px}
-  .eyebrow{font-family:"Space Grotesk";font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-  header h1{font-size:clamp(34px,6vw,56px);font-weight:700;margin-bottom:16px}
-  header .role{font-family:"Space Grotesk";font-size:clamp(18px,3vw,24px);font-weight:500;color:var(--ink);margin-bottom:20px}
-  header p.intro{font-size:18px;color:var(--muted);max-width:640px;margin-bottom:28px}
+  header{padding:80px 0 52px}
+  .prompt{color:var(--mut);font-size:14px;margin-bottom:16px}
+  .prompt b{color:var(--green);font-weight:500}
+  header h1{font-size:clamp(32px,6vw,52px);color:var(--green);text-shadow:var(--glow);margin-bottom:14px}
+  .cursor{display:inline-block;width:.55em;height:1em;background:var(--green);margin-left:4px;vertical-align:-1px;box-shadow:var(--glow);animation:blink 1.05s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  header .role{font-size:clamp(16px,3vw,20px);color:var(--dim);margin-bottom:20px}
+  header p.intro{font-size:16px;color:var(--dim);max-width:660px;margin-bottom:28px}
   .cta{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-family:"Space Grotesk";font-weight:500;font-size:14px;text-decoration:none;padding:10px 18px;border-radius:10px;transition:all .15s}
-  .btn.primary{background:var(--accent);color:#fff}
-  .btn.primary:hover{background:#2430c4}
-  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
-  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-weight:500;font-size:14px;text-decoration:none;padding:10px 18px;border-radius:6px;transition:all .15s;cursor:pointer}
+  .btn.primary{border:1px solid var(--green);color:var(--green);background:transparent}
+  .btn.primary:hover{background:var(--green);color:var(--bg);box-shadow:var(--glow)}
+  .btn.ghost{border:1px solid var(--mut);color:var(--dim);background:transparent}
+  .btn.ghost:hover{border-color:var(--green);color:var(--green)}
+  .btn::before{content:"> "}
 
   /* Sections */
-  section{padding:52px 0;border-top:1px solid var(--line)}
-  .sec-label{font-family:"Space Grotesk";font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
-  h2.sec-title{font-size:28px;font-weight:600;margin-bottom:24px}
-  p.lead{font-size:18px;color:var(--ink);max-width:680px}
+  section{padding:50px 0;border-top:1px solid var(--line)}
+  .sec-label{font-size:13px;color:var(--mut);margin-bottom:24px;letter-spacing:.02em}
+  .sec-label::before{content:"$ ";color:var(--green);text-shadow:var(--glow)}
+  p.lead{font-size:16px;color:var(--dim);max-width:700px}
 
   /* Experience */
   .xp{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
   .xp:last-child{border-bottom:0}
-  .xp .when{font-family:"Space Grotesk";font-size:13px;color:var(--muted);min-width:130px;padding-top:3px}
-  .xp .role{font-family:"Space Grotesk";font-weight:600;font-size:17px}
-  .xp .org{color:var(--accent);font-size:15px;margin-bottom:8px}
-  .xp ul{margin:6px 0 0 18px;color:var(--muted);font-size:15px}
-  .xp li{margin-bottom:4px}
+  .xp .when{font-size:13px;color:var(--mut);min-width:130px;padding-top:3px}
+  .xp .role{font-weight:700;font-size:16px;color:var(--green)}
+  .xp .org{color:var(--dim);font-size:14px;margin-bottom:8px}
+  .xp ul{margin:6px 0 0 0;list-style:none;color:var(--dim);font-size:14px}
+  .xp li{margin-bottom:5px;padding-left:16px;position:relative}
+  .xp li::before{content:"–";position:absolute;left:0;color:var(--green)}
   @media(max-width:640px){.xp{flex-direction:column;gap:4px}.xp .when{min-width:0}}
 
   /* Projects */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:680px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
-  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
-  .card .tag{font-family:"Space Grotesk";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-  .card h3{font-size:19px;font-weight:600;margin-bottom:10px}
-  .card p{font-size:14px;color:var(--muted);margin-bottom:14px;flex:1}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s,transform .15s}
+  .card:hover{border-color:var(--green);box-shadow:var(--glow);transform:translateY(-2px)}
+  .card .tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+  .card h3{font-size:17px;font-weight:700;color:var(--dim);margin-bottom:10px}
+  .card p{font-size:13.5px;color:var(--mut);margin-bottom:14px;flex:1;line-height:1.6}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-  .chip{font-family:"Space Grotesk";font-size:11px;background:var(--chip);color:var(--ink);padding:3px 9px;border-radius:20px}
-  .card .glink{font-family:"Space Grotesk";font-size:13px;font-weight:500;color:var(--accent);text-decoration:none}
-  .card .glink:hover{text-decoration:underline}
-  .inprogress{opacity:.92}
-  .badge{font-family:"Space Grotesk";font-size:11px;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:6px;margin-left:6px}
+  .chip{font-size:11px;color:var(--dim);border:1px solid var(--line);padding:3px 9px;border-radius:4px}
+  .chip::before{content:"#";color:var(--mut)}
+  .card .glink{font-size:13px;font-weight:500;color:var(--green);text-decoration:none}
+  .card .glink:hover{text-shadow:var(--glow);text-decoration:underline}
 
   /* Skills */
   .skillgrid{display:flex;flex-wrap:wrap;gap:8px}
-  .skill{font-family:"Space Grotesk";font-size:14px;border:1px solid var(--line);padding:7px 14px;border-radius:10px}
+  .skill{font-size:13px;color:var(--dim);border:1px solid var(--line);padding:7px 13px;border-radius:6px}
+  .skill:hover{border-color:var(--green);color:var(--green)}
 
   /* Education */
-  .edu .role{font-family:"Space Grotesk";font-weight:600;font-size:17px}
-  .edu .org{color:var(--accent);font-size:15px}
-  .edu .meta{color:var(--muted);font-size:14px;margin-top:4px}
+  .edu .role{font-weight:700;font-size:16px;color:var(--green)}
+  .edu .org{color:var(--dim);font-size:14px}
+  .edu .meta{color:var(--mut);font-size:13px;margin-top:4px}
 
-  footer{padding:48px 0 60px;border-top:1px solid var(--line);text-align:center}
-  footer .flinks{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
-  footer a{font-family:"Space Grotesk";font-size:14px;color:var(--ink);text-decoration:none}
-  footer a:hover{color:var(--accent)}
-  footer .fine{font-size:13px;color:var(--muted)}
+  footer{padding:44px 0 60px;border-top:1px solid var(--line);text-align:center}
+  footer .flinks{display:flex;gap:22px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+  footer a{font-size:14px;color:var(--dim);text-decoration:none}
+  footer a:hover{color:var(--green);text-shadow:var(--glow)}
+  footer .fine{font-size:12px;color:var(--mut)}
+  footer .fine::before{content:"// "}
 
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
   .reveal.in{opacity:1;transform:none}
@@ -104,42 +134,45 @@
 
 <nav>
   <div class="wrap">
-    <span class="brand">YT</span>
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <span class="brand">yjtrx@portfolio:~$</span>
+    <div class="navright">
+      <div class="links">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </div>
+      <button id="themeToggle" class="tbtn" aria-label="Toggle color theme">theme</button>
     </div>
   </div>
 </nav>
 
 <header>
   <div class="wrap">
-    <div class="eyebrow">AI / ML Engineer</div>
-    <h1>Yashraj Gautam Tambe</h1>
-    <div class="role">Computer Vision · LLM &amp; RAG Systems · Imitation Learning</div>
+    <div class="prompt">visitor@yjtrx:~$ <b>whoami</b></div>
+    <h1>Yashraj Gautam Tambe<span class="cursor"></span></h1>
+    <div class="role">AI/ML Engineer · Computer Vision · LLM &amp; RAG Systems · Imitation Learning</div>
     <p class="intro">Machine learning engineer with ~4 years of experience building production LLM/RAG pipelines, computer-vision perception systems, and imitation-learning agents. Currently completing an MS in Applied Machine Intelligence at Northeastern University.</p>
     <div class="cta">
-      <a class="btn primary" href="#projects">View projects</a>
-      <a class="btn ghost" href="mailto:tambe.y@northeastern.edu">Get in touch</a>
+      <a class="btn primary" href="#projects">view projects</a>
+      <a class="btn ghost" href="mailto:tambe.y@northeastern.edu">get in touch</a>
       <!-- Add resume.pdf to the repo to enable this link -->
-      <a class="btn ghost" href="resume.pdf">Resume</a>
+      <a class="btn ghost" href="resume.pdf">resume</a>
     </div>
   </div>
 </header>
 
 <section id="about" class="reveal">
   <div class="wrap">
-    <div class="sec-label">About</div>
+    <div class="sec-label">cat about.md</div>
     <p class="lead">I build systems that turn models into working products — from 6-DoF object pose estimation and vision-based control to LLM pipelines that classify, reason over, and respond to real-world data. My focus areas are computer vision and perception, generative-AI/LLM systems, and applied NLP. I care about shipping things that actually run, and about verifying results against the artifact rather than the claim.</p>
   </div>
 </section>
 
 <section id="experience" class="reveal">
   <div class="wrap">
-    <div class="sec-label">Experience</div>
+    <div class="sec-label">cat experience.log</div>
     <div class="xp">
       <div class="when">2022 – 2025 <!-- [verify dates] --></div>
       <div>
@@ -148,7 +181,7 @@
         <ul>
           <li>Built LLM and RAG pipelines for client applications, from retrieval and prompting through evaluation.</li>
           <li>Self-taught RAG (via DeepLearning.AI) when a client needed LLM capabilities, then shipped it into production.</li>
-          <li><!-- [add 1–2 concrete, verifiable achievements — with real metrics only] --></li>
+          <li><!-- [add 1-2 concrete, verifiable achievements — real metrics only] --></li>
         </ul>
       </div>
     </div>
@@ -158,7 +191,7 @@
         <div class="role">Internships &amp; Early Roles</div>
         <div class="org">ClearQuote · Necesario · PAICA · Shashwat Foundation · Microland (BNP Paribas)</div>
         <ul>
-          <li><!-- [add one line summarizing the kind of work across these, if you'd like] --></li>
+          <li><!-- [optional: one line summarizing the work across these] --></li>
         </ul>
       </div>
     </div>
@@ -167,15 +200,15 @@
 
 <section id="projects" class="reveal">
   <div class="wrap">
-    <div class="sec-label">Selected Projects</div>
+    <div class="sec-label">ls projects/</div>
     <div class="grid">
 
       <div class="card">
         <div class="tag">Computer Vision · Perception</div>
         <h3>6-DoF Object Pose Estimation</h3>
         <p>A pose-estimation pipeline built on FoundationPose and evaluated on the LM-O dataset across four validated stages, with an RViz2 visualizer for inspecting predicted poses.</p>
-        <div class="chips"><span class="chip">FoundationPose</span><span class="chip">LM-O</span><span class="chip">ROS2 / RViz2</span><span class="chip">Python</span></div>
-        <a class="glink" href="https://github.com/yjtrx/6D_object_pose_estimation" target="_blank" rel="noopener">View on GitHub →</a>
+        <div class="chips"><span class="chip">FoundationPose</span><span class="chip">LM-O</span><span class="chip">ROS2/RViz2</span><span class="chip">Python</span></div>
+        <a class="glink" href="https://github.com/yjtrx/6D_object_pose_estimation" target="_blank" rel="noopener">view on github →</a>
       </div>
 
       <div class="card">
@@ -183,23 +216,7 @@
         <h3>CLAIRE — LLM-Powered Consumer Complaint Intake &amp; Resolution Engine</h3>
         <p>A GPT-4o-mini pipeline that classifies CFPB consumer complaints into the official taxonomy, assigns SLA tiers (14/20/30 days), and drafts consumer-facing responses — deployed as a three-tab Streamlit app. ~84% product / ~83% issue classification accuracy (n=100). <!-- [verify metrics before publishing] --></p>
         <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">RAG</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
-        <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-
-      <div class="card inprogress">
-        <div class="tag">Reinforcement Learning · Robotics</div>
-        <h3>Autonomous Drone Navigation <span class="badge">In progress</span></h3>
-        <p>Vision-only navigation in simulation: a CNN/ViT feature extractor feeding a PPO policy, trained in gym-pybullet-drones for obstacle-aware flight.</p>
-        <div class="chips"><span class="chip">PPO</span><span class="chip">CNN / ViT</span><span class="chip">gym-pybullet-drones</span><span class="chip">PyTorch</span></div>
-        <a class="glink" href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub profile →</a>
-      </div>
-
-      <div class="card">
-        <div class="tag">Imitation Learning</div>
-        <h3>Behavior Cloning &amp; DAgger on MuJoCo</h3>
-        <p>Imitation-learning agents trained with Behavior Cloning and DAgger on MuJoCo control tasks, reaching ~82% of expert performance on HalfCheetah via DAgger.</p>
-        <div class="chips"><span class="chip">DAgger</span><span class="chip">Behavior Cloning</span><span class="chip">MuJoCo</span><span class="chip">PyTorch</span></div>
-        <a class="glink" href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub profile →</a>
+        <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">view on github →</a>
       </div>
 
     </div>
@@ -208,7 +225,7 @@
 
 <section id="skills" class="reveal">
   <div class="wrap">
-    <div class="sec-label">Skills</div>
+    <div class="sec-label">cat skills.txt</div>
     <div class="skillgrid">
       <span class="skill">Python</span>
       <span class="skill">PyTorch</span>
@@ -227,16 +244,16 @@
 
 <section id="education" class="reveal">
   <div class="wrap">
-    <div class="sec-label">Education</div>
+    <div class="sec-label">cat education.md</div>
     <div class="edu">
       <div class="role">M.S., Applied Machine Intelligence</div>
       <div class="org">Northeastern University</div>
       <div class="meta">2024 – 2026 · GPA 4.0 <!-- [verify] --> · Coursework incl. Applied Computer Vision</div>
     </div>
     <div class="edu" style="margin-top:18px">
-      <div class="role">B.E. in Electronics and Telecommunication</div>
-      <div class="org">University of Mumbai</div>
-      <div class="meta">2014-2017</div>
+      <div class="role"><!-- [Your undergraduate degree] --></div>
+      <div class="org"><!-- [University] --></div>
+      <div class="meta"><!-- [Years] --></div>
     </div>
   </div>
 </section>
@@ -244,18 +261,33 @@
 <footer id="contact">
   <div class="wrap">
     <div class="flinks">
-      <a href="mailto:tambe.y@northeastern.edu">Email</a>
-      <a href="https://github.com/yjtrx" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:tambe.y@northeastern.edu">email</a>
+      <a href="https://github.com/yjtrx" target="_blank" rel="noopener">github</a>
       <!-- Add your LinkedIn URL below -->
-      <a href="https://www.linkedin.com/in/yashraj-tambe/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener">linkedin</a>
     </div>
-    <div class="fine">© <span id="yr"></span> Yashraj Gautam Tambe · Built and hosted on GitHub Pages</div>
+    <div class="fine">&copy; <span id="yr"></span> Yashraj Gautam Tambe · built &amp; hosted on GitHub Pages</div>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
-  // Reveal-on-scroll
+
+  // Theme toggle
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  function label(t){ return t==='light' ? '\u263E dark' : '\u2600 light'; }
+  function setTheme(t){
+    root.setAttribute('data-theme', t);
+    btn.textContent = label(t);
+    try{ localStorage.setItem('theme', t); }catch(e){}
+  }
+  setTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  btn.addEventListener('click', function(){
+    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+  });
+
+  // Reveal on scroll
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.12});
