@@ -265,6 +265,14 @@
     <div class="grid">
 
       <div class="card">
+        <div class="tag">LLM · Applied NLP</div>
+        <h3>CLAIRE — LLM-Powered Consumer Complaint Intake &amp; Resolution Engine</h3>
+        <p>A GPT-4o-mini engine (led as a 4-person team) that ingests CFPB consumer complaints, categorizes issue type across the official taxonomy, and returns the resolution SLA — with prompt-version caching for reproducibility and a batch per-class accuracy evaluation. Few-shot prompting plus near-equivalence taxonomy grouping lifted accuracy 25% → 40% to an 80% issue-classification benchmark over a 10,885-complaint split. Deployed as a Streamlit app.</p>
+        <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">Few-Shot Prompting</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
+        <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">view on github →</a>
+      </div>
+
+      <div class="card">
         <div class="tag">Computer Vision · Perception</div>
         <h3>6-DoF Object Pose Estimation</h3>
         <p>A pose-estimation pipeline built on FoundationPose and evaluated on the LM-O dataset across four validated stages, with an RViz2 visualizer for inspecting predicted poses.</p>
@@ -273,11 +281,11 @@
       </div>
 
       <div class="card">
-        <div class="tag">LLM · Applied NLP</div>
-        <h3>CLAIRE — LLM-Powered Consumer Complaint Intake &amp; Resolution Engine</h3>
-        <p>A GPT-4o-mini engine (led as a 4-person team) that ingests CFPB consumer complaints, categorizes issue type across the official taxonomy, and returns the resolution SLA — with prompt-version caching for reproducibility and a batch per-class accuracy evaluation. Few-shot prompting plus near-equivalence taxonomy grouping lifted accuracy 25% → 40% to an 80% issue-classification benchmark over a 10,885-complaint split. Deployed as a Streamlit app.</p>
-        <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">Few-Shot Prompting</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
-        <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">view on github →</a>
+        <div class="tag">Computer Vision · Published (IEEE)</div>
+        <h3>American Sign Language Detection — Instance-Based Segmentation</h3>
+        <p>An instance-segmentation model that recognizes ASL words (not just fingerspelling) from the ASL Lexicon Video dataset. Built a custom key-frame (dominant-frame) extraction algorithm in OpenCV to turn redundant video into an as-per-requirement image dataset, with manual labeling — reaching ~90% average IoU on test. Published and presented at IEEE IEMTRONICS 2021.</p>
+        <div class="chips"><span class="chip">Instance Segmentation</span><span class="chip">Key-Frame Extraction</span><span class="chip">OpenCV</span><span class="chip">Python</span></div>
+        <a class="glink" href="https://ieeexplore.ieee.org/document/9422601" target="_blank" rel="noopener">read paper →</a>
       </div>
 
       <div class="card">
@@ -287,15 +295,6 @@
         <div class="chips"><span class="chip">PyTorch</span><span class="chip">MuJoCo</span><span class="chip">Gymnasium</span><span class="chip">NumPy</span></div>
         <span class="soon">repo publishing soon</span>
       </div>
-
-      <div class="card">
-        <div class="tag">NLP · Model Selection</div>
-        <h3>Financial Sentiment Classification</h3>
-        <p>Compared ULMFiT transfer learning (FastAI / AWD-LSTM) against traditional NLP (TF-IDF with SVM / Logistic Regression / Naive Bayes) on Financial PhraseBank. Recommended the traditional TF-IDF+SVM for production — trading ULMFiT's ~4-point accuracy edge (90% vs ~85%) for ~50–170× faster, transparent, auditable inference suited to regulated finance.</p>
-        <div class="chips"><span class="chip">FastAI</span><span class="chip">ULMFiT</span><span class="chip">scikit-learn</span><span class="chip">TF-IDF</span></div>
-        <span class="soon">repo publishing soon</span>
-      </div>
-
     </div>
   </div>
 </section>
