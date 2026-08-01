@@ -7,11 +7,11 @@
 <title>Yashraj Gautam Tambe — AI/ML Engineer</title>
 <meta name="description" content="Yashraj Gautam Tambe — AI/ML Engineer: computer vision, LLM/RAG systems, imitation learning.">
 <!-- ============================================================
-     EDIT GUIDE
-     - Replace every [ ... ] placeholder with your real info.
-     - Add your LinkedIn URL where marked.
-     - Verify dates, titles, GPA, and metrics before publishing.
-     - To add your resume: drop resume.pdf in the repo (Resume link).
+     EDIT GUIDE — remaining manual steps
+     - Drop resume.pdf into the repo root to enable the Resume link.
+     - When the "repo publishing soon" projects go live on GitHub,
+       replace their muted note with the same "view on github →" link
+       the other cards use.
      - Theme toggle: default is terminal (dark). Choice is remembered.
      ============================================================ -->
 <!-- set theme before paint to avoid flash -->
@@ -108,6 +108,8 @@
   .chip::before{content:"#";color:var(--mut)}
   .card .glink{font-size:13px;font-weight:500;color:var(--green);text-decoration:none}
   .card .glink:hover{text-shadow:var(--glow);text-decoration:underline}
+  .card .soon{font-size:13px;font-weight:500;color:var(--mut)}
+  .card .soon::before{content:"● ";font-size:9px;vertical-align:middle}
 
   /* Skills */
   .skillgrid{display:flex;flex-wrap:wrap;gap:8px}
@@ -153,7 +155,7 @@
     <div class="prompt">visitor@yjtrx:~$ <b>whoami</b></div>
     <h1>Yashraj Gautam Tambe<span class="cursor"></span></h1>
     <div class="role">AI/ML Engineer · Computer Vision · LLM &amp; RAG Systems · Imitation Learning</div>
-    <p class="intro">Machine learning engineer with ~4 years of experience building production LLM/RAG pipelines, computer-vision perception systems, and imitation-learning agents. Currently completing an MS in Applied Machine Intelligence at Northeastern University.</p>
+    <p class="intro">Machine learning engineer with ~4 years of experience building production LLM/RAG pipelines, computer-vision perception systems, and imitation-learning agents. Currently completing an MS in Applied Machine Intelligence (Healthcare) at Northeastern University.</p>
     <div class="cta">
       <a class="btn primary" href="#projects">view projects</a>
       <a class="btn ghost" href="mailto:tambe.y@northeastern.edu">get in touch</a>
@@ -174,24 +176,83 @@
   <div class="wrap">
     <div class="sec-label">cat experience.log</div>
     <div class="xp">
-      <div class="when">2022 – 2025 <!-- [verify dates] --></div>
+      <div class="when">Dec 2023 – Jun 2025</div>
       <div>
-        <div class="role">Senior Engineer / Data Science Engineer</div>
-        <div class="org">Tata Elxsi</div>
+        <div class="role">Senior Engineer</div>
+        <div class="org">Tata Elxsi · Bengaluru, India</div>
         <ul>
-          <li>Built LLM and RAG pipelines for client applications, from retrieval and prompting through evaluation.</li>
-          <li>Self-taught RAG (via DeepLearning.AI) when a client needed LLM capabilities, then shipped it into production.</li>
-          <li><!-- [add 1-2 concrete, verifiable achievements — real metrics only] --></li>
+          <li>Self-taught RAG (via DeepLearning.AI) when a client needed LLM capabilities, then co-built a production RAG system integrating an LLM with a Weaviate vector database — 30% faster data retrieval.</li>
+          <li>Designed a CLI around a locally deployed, Docker-containerized RAG pipeline's REST API — ~20% faster retrieval.</li>
         </ul>
       </div>
     </div>
     <div class="xp">
-      <div class="when">Earlier</div>
+      <div class="when">Dec 2021 – Dec 2023</div>
       <div>
-        <div class="role">Internships &amp; Early Roles</div>
-        <div class="org">ClearQuote · Necesario · PAICA · Shashwat Foundation · Microland (BNP Paribas)</div>
+        <div class="role">Data Science Engineer</div>
+        <div class="org">Tata Elxsi · Bengaluru, India</div>
         <ul>
-          <li><!-- [optional: one line summarizing the work across these] --></li>
+          <li>Researched and implemented Chain-of-Thought and Few-Shot prompting for LLM-driven behaviour-tree generation (GPT-3.5-turbo) — earned formal Customer Appreciation.</li>
+          <li>Evaluated, reconfigured, and retrained 6DoF pose-estimation models (PoseCNN, EfficientPose, FoundationPose) with ICP-based alignment for a robotic-manipulation use case — 60% accuracy.</li>
+          <li>Built an automated validation pipeline for synthetic 3D pose data — 50% less manual annotation review; containerized the workflow in Docker.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Jun 2021 – Sep 2021</div>
+      <div>
+        <div class="role">Computer Vision Engineer Intern</div>
+        <div class="org">ClearQuote · Gandhinagar, India</div>
+        <ul>
+          <li>Researched and evaluated a PyTorch Detectron2 Mask R-CNN for alloy-damage detection on a custom automotive dataset, benchmarking against the existing production model.</li>
+          <li>Explored multiple PyTorch classifiers and colour-space models (RGB, HSV, LAB) for car-colour identification — 71% accuracy.</li>
+          <li>Developed a car-lamp damage-detection model with Detectron2 — per-class F1 of 0.48–0.80.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Mar 2021 – Jun 2021</div>
+      <div>
+        <div class="role">Computer Vision Engineer Intern</div>
+        <div class="org">Necesario Innovations · Gandhinagar, India</div>
+        <ul>
+          <li>Implemented real-time face detection at ~100 ms and deployed it on a REST API for instant video analysis.</li>
+          <li>Deployed a deep-learning face-recognition model (ONNX) running in under 0.2 s; added MediaPipe gesture detection.</li>
+          <li>Built a single-image 3D human-modelling pipeline for an AR use case and an OpenCV boomerang-style video feature.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Nov 2020 – Apr 2021</div>
+      <div>
+        <div class="role">AI Trainer</div>
+        <div class="org">Shashwat Foundation — Intel &amp; Govt. of India AI4Youth · Mumbai, India</div>
+        <ul>
+          <li>Mentored secondary-school students in developing and deploying their first AI models, adapting explanations to each student's level.</li>
+          <li>Facilitated problem reformulation to sharpen AI applicability and supported hands-on local model deployment.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Sep 2020 – Dec 2020</div>
+      <div>
+        <div class="role">Data Science Intern</div>
+        <div class="org">PainFree A.I. Academy (PAICA) · Mumbai, India</div>
+        <ul>
+          <li>Implemented object-detection models using the TensorFlow Object Detection API, plus additional detectors built from scratch with OpenCV and Python.</li>
+          <li>Wrote beginner-facing technical articles explaining the implementations so newcomers could follow and reproduce the work.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp">
+      <div class="when">Aug 2018 – May 2019</div>
+      <div>
+        <div class="role">Service Desk Engineer</div>
+        <div class="org">Microland Ltd. (Client: BNP Paribas) · Mumbai, India</div>
+        <ul>
+          <li>Provided time-sensitive, multi-channel technical support for staff at BNP Paribas, a regulated financial institution, following strict hierarchical approval protocols.</li>
+          <li>Managed block-leave compliance operations — precise coordination with managers to sequentially revoke and restore employee access to company resources.</li>
+          <li>Administered Active Directory, email (Outlook, Lotus Notes), and Skype configurations, handling confidential information with discretion.</li>
         </ul>
       </div>
     </div>
@@ -214,9 +275,25 @@
       <div class="card">
         <div class="tag">LLM · Applied NLP</div>
         <h3>CLAIRE — LLM-Powered Consumer Complaint Intake &amp; Resolution Engine</h3>
-        <p>A GPT-4o-mini pipeline that classifies CFPB consumer complaints into the official taxonomy, assigns SLA tiers (14/20/30 days), and drafts consumer-facing responses — deployed as a three-tab Streamlit app. ~84% product / ~83% issue classification accuracy (n=100). <!-- [verify metrics before publishing] --></p>
-        <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">RAG</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
+        <p>A GPT-4o-mini engine (led as a 4-person team) that ingests CFPB consumer complaints, categorizes issue type across the official taxonomy, and returns the resolution SLA — with prompt-version caching for reproducibility and a batch per-class accuracy evaluation. Few-shot prompting plus near-equivalence taxonomy grouping lifted accuracy 25% → 40% to an 80% issue-classification benchmark over a 10,885-complaint split. Deployed as a Streamlit app.</p>
+        <div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">Few-Shot Prompting</span><span class="chip">Streamlit</span><span class="chip">Evaluation</span></div>
         <a class="glink" href="https://github.com/yjtrx/CLAIRE" target="_blank" rel="noopener">view on github →</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Imitation Learning · Robotics</div>
+        <h3>Imitation Learning — Behavior Cloning &amp; DAgger on MuJoCo</h3>
+        <p>Implemented and compared Behavior Cloning and DAgger across three MuJoCo continuous-control tasks (Hopper, Walker2d, HalfCheetah). Diagnosed distribution shift as BC's failure mode; DAgger recovered up to ~82% of expert performance (HalfCheetah) — 11–15× over Behavior Cloning. Rewrote the expert-policy loader in NumPy to remove a TensorFlow/Python-3.12 conflict.</p>
+        <div class="chips"><span class="chip">PyTorch</span><span class="chip">MuJoCo</span><span class="chip">Gymnasium</span><span class="chip">NumPy</span></div>
+        <span class="soon">repo publishing soon</span>
+      </div>
+
+      <div class="card">
+        <div class="tag">NLP · Model Selection</div>
+        <h3>Financial Sentiment Classification</h3>
+        <p>Compared ULMFiT transfer learning (FastAI / AWD-LSTM) against traditional NLP (TF-IDF with SVM / Logistic Regression / Naive Bayes) on Financial PhraseBank. Recommended the traditional TF-IDF+SVM for production — trading ULMFiT's ~4-point accuracy edge (90% vs ~85%) for ~50–170× faster, transparent, auditable inference suited to regulated finance.</p>
+        <div class="chips"><span class="chip">FastAI</span><span class="chip">ULMFiT</span><span class="chip">scikit-learn</span><span class="chip">TF-IDF</span></div>
+        <span class="soon">repo publishing soon</span>
       </div>
 
     </div>
@@ -230,12 +307,21 @@
       <span class="skill">Python</span>
       <span class="skill">PyTorch</span>
       <span class="skill">TensorFlow / Keras</span>
-      <span class="skill">LLM &amp; RAG pipelines</span>
-      <span class="skill">Applied NLP</span>
+      <span class="skill">OpenCV</span>
+      <span class="skill">Detectron2</span>
       <span class="skill">Computer Vision &amp; Perception</span>
+      <span class="skill">LLM Prompt Engineering</span>
+      <span class="skill">RAG Pipelines</span>
+      <span class="skill">OpenAI API</span>
+      <span class="skill">Few-Shot / Chain-of-Thought</span>
+      <span class="skill">LLM Evaluation</span>
+      <span class="skill">Applied NLP</span>
       <span class="skill">Imitation Learning (BC / DAgger)</span>
-      <span class="skill">GCP &amp; Vertex AI</span>
-      <span class="skill">ROS2 / RViz2</span>
+      <span class="skill">Model Monitoring &amp; Drift Detection</span>
+      <span class="skill">Google Cloud / Vertex AI</span>
+      <span class="skill">Docker</span>
+      <span class="skill">Flask / REST API</span>
+      <span class="skill">Pandas / NumPy</span>
       <span class="skill">Streamlit</span>
       <span class="skill">Git</span>
     </div>
@@ -246,14 +332,19 @@
   <div class="wrap">
     <div class="sec-label">cat education.md</div>
     <div class="edu">
-      <div class="role">M.S., Applied Machine Intelligence</div>
+      <div class="role">M.P.S., Applied Machine Intelligence</div>
       <div class="org">Northeastern University</div>
-      <div class="meta">2024 – 2026 · GPA 4.0 <!-- [verify] --> · Coursework incl. Applied Computer Vision</div>
+      <div class="meta">2025 – 2026 · GPA 4.0 / 4.0 · Concentration: Healthcare · Coursework incl. Applied Computer Vision, Data Governance &amp; Responsible AI, Healthcare Information Processing, Applied Analytics</div>
     </div>
     <div class="edu" style="margin-top:18px">
-      <div class="role"><!-- [Your undergraduate degree] --></div>
-      <div class="org"><!-- [University] --></div>
-      <div class="meta"><!-- [Years] --></div>
+      <div class="role">B.E., Electronics &amp; Telecommunication</div>
+      <div class="org">Rajiv Gandhi Institute of Technology, University of Mumbai</div>
+      <div class="meta">2014 – 2017</div>
+    </div>
+    <div class="edu" style="margin-top:18px">
+      <div class="role">PGP, Artificial Intelligence &amp; Machine Learning</div>
+      <div class="org">Great Learning</div>
+      <div class="meta">2019 – 2020 · Capstone published at IEEE IEMTRONICS 2021 (American Sign Language detection)</div>
     </div>
   </div>
 </section>
@@ -263,8 +354,7 @@
     <div class="flinks">
       <a href="mailto:tambe.y@northeastern.edu">email</a>
       <a href="https://github.com/yjtrx" target="_blank" rel="noopener">github</a>
-      <!-- Add your LinkedIn URL below -->
-      <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.linkedin.com/in/yashraj-tambe/" target="_blank" rel="noopener">linkedin</a>
     </div>
     <div class="fine">&copy; <span id="yr"></span> Yashraj Gautam Tambe · built &amp; hosted on GitHub Pages</div>
   </div>
